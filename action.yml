@@ -1,0 +1,9 @@
+name: 'Link Snitch'
+description: 'Scans your site for broken links so you can fix them.'
+author: 'victoriadrake'
+branding:
+  icon: 'link'
+  color: 'yellow'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
