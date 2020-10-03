@@ -14,9 +14,9 @@ if [[ -z "${URL}" ]]; then
 fi
 
 if ! [[ -z "${URL}" ]] && [[ -z "${FILENAME}" ]]; then
-    time python3 hydra.py ${URL}
+    time python3 hydra.py ${URL} ${CONFIG:-""}
 fi
 
 if ! [[ -z "${URL}" ]] && ! [[ -z "${FILENAME}" ]]; then
-    time python3 hydra.py ${URL} > ${FILENAME}
+    time python3 hydra.py ${URL} ${CONFIG:-""} > ${FILENAME}
 fi

@@ -39,6 +39,7 @@ on:
 env:
   URL: https://example.com
   FILENAME: report.yaml
+  CONFIG: config.json
 
 jobs:
   build:
@@ -58,7 +59,10 @@ jobs:
 
 This action requires a single environment variable, `URL`. Set this to the fully qualified address of your site, including schema (the `https://` part).
 
-The `FILENAME` variable is optional. See [view results](#view-results) below.
+Optional variables include:
+
+- `FILENAME`: See [view results](#view-results) below.
+- `CONFIG`: Your Hydra configuration fle. See [Configuration for Hydra](https://github.com/victoriadrake/hydra-link-checker#configuration).
 
 ### Workflow customization
 
@@ -68,4 +72,4 @@ For help editing the YAML file, see [Workflow syntax for GitHub Actions](https:/
 
 ## View results
 
-By default, the report is YAML formatted and output to `stdout` in your Action run. If you wish to save this to a file that you can download, set `FILENAME` to a file name of your choosing, then use `actions/upload-artifact`. See [Uploading build and test artifacts](https://docs.github.com/en/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts#uploading-build-and-test-artifacts) for more.
+By default, the report is YAML formatted and output to `stdout` in your Action run. If you wish to save this to a file that you can download, set `FILENAME` to a file name of your choosing, then use `actions/upload-artifact` in your workflow. See [Uploading build and test artifacts](https://docs.github.com/en/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts#uploading-build-and-test-artifacts) for more.
