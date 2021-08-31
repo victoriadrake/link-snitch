@@ -61,7 +61,7 @@ This action requires a single environment variable, `URL`. Set this to the fully
 
 Optional variables include:
 
-- `FILENAME`: See [view results](#view-results) below.
+- `FILENAME`: See [view results](#view-results) below. Omit if you want results printed to `stdout` otherwise the action will appear to fail without errors.
 - `CONFIG`: Your Hydra configuration fle. See [Configuration for Hydra](https://github.com/victoriadrake/hydra-link-checker#configuration).
 
 ### Workflow customization
