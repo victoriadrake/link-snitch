@@ -2,3 +2,4 @@
 env/
 venv/
 hydra.py
+hydracmd

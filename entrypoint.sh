@@ -9,14 +9,33 @@ if grep -q "404: Not Found" hydra.py; then
     exit 1
 fi
 
+hydracmd="hydracmd"
+rm -f $hydracmd
+touch $hydracmd
+
+addcmd() {
+    echo "$@" >> $hydracmd
+}
+
+addcmd "time python3 hydra.py"
+
 if [[ -z "${URL}" ]]; then
     echo -e "No URL set."
+    exit 1
 fi
 
-if ! [[ -z "${URL}" ]] && [[ -z "${FILENAME}" ]]; then
-    time python3 hydra.py ${URL} ${CONFIG:-""}
+if ! [[ -z "${URL}" ]]; then
+    addcmd $URL
 fi
 
-if ! [[ -z "${URL}" ]] && ! [[ -z "${FILENAME}" ]]; then
-    time python3 hydra.py ${URL} ${CONFIG:-""} > ${FILENAME}
+if ! [[ -z "$CONFIG" ]]; then
+    addcmd "--config"
+    addcmd $CONFIG
 fi
+
+if ! [[ -z "${FILENAME}" ]]; then
+    addcmd ">"
+    addcmd $FILENAME
+fi
+
+eval `cat $hydracmd`
