@@ -62,7 +62,7 @@ This action requires a single environment variable, `URL`. Set this to the fully
 Optional variables include:
 
 - `FILENAME`: See [view results](#view-results) below.
-- `CONFIG`: Your Hydra configuration fle. See [Configuration for Hydra](https://github.com/victoriadrake/hydra-link-checker#configuration).
+- `CONFIG`: Your Hydra configuration file. See [Configuration for Hydra](https://github.com/victoriadrake/hydra-link-checker#configuration).
 
 ### Workflow customization
 
