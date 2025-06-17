@@ -1,0 +1,21 @@
+name: Check README Links
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+env:
+  URL: https://victoria.dev/link-snitch/
+
+jobs:
+  check_links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run Link Snitch on README
+        uses: ./ # Refers to the current action in this repository
+        with:
+          url: ${{ env.URL }}
