@@ -66,10 +66,10 @@ Optional variables include:
 
 ### Workflow customization
 
-See full instructions for [Configuring and managing workflows](https://help.github.com/en/actions/configuring-and-managing-workflows).
+See full instructions for [Choosing what your workflow does](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does).
 
-For help editing the YAML file, see [Workflow syntax for GitHub Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions).
+For help editing the YAML file, see [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions).
 
 ## View results
 
-By default, the report is YAML formatted and output to `stdout` in your Action run. If you wish to save this to a file that you can download, set `FILENAME` to a file name of your choosing, then use `actions/upload-artifact` in your workflow. See [Uploading build and test artifacts](https://docs.github.com/en/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts#uploading-build-and-test-artifacts) for more.
+By default, the report is YAML formatted and output to `stdout` in your Action run. If you wish to save this to a file that you can download, set `FILENAME` to a file name of your choosing, then use `actions/upload-artifact` in your workflow. See [Uploading build and test artifacts](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/storing-and-sharing-data-from-a-workflow#uploading-build-and-test-artifacts) for more.
